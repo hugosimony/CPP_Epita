@@ -1,0 +1,18 @@
+# Code Review
+# Creators: Enzo SOUANE and Tanya HALICHE
+# Reviewer: Hugo SIMONY
+# is_prime_prog()
+# 27/09/2022
+
+Architecture ok.
+Code compiling well.
+Prime check is good.
+Exception of 1 handled, not a prime.
+
+Prime check is not as fast as it can be :
+'< srqt(n)' is better than '< n / 2'.
+However, the loop is faster than '< n'.
+
+The output is as it should be.
+
+Great work!
