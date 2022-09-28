@@ -10,9 +10,7 @@ Motive search is good.
 
 All the 'using' are weird, not needed as you write them fully in the code. Not a big deal anyway.
 
-Exception of bad file handled. :)
-Exception of same motive in the word not handled. :(
-(That's ok)
+Exception of bad file handled.
 
 Good use of find() and push_back().
 Nice idea to use a vector dynamically.
