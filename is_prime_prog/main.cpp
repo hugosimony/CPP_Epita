@@ -1,20 +1,6 @@
-#include <cmath>
 #include <iostream>
 
-int main()
-{
-    int x;
-    while (std::cix >> x)
-    {
-        if (is_prime(x))
-            std::cout << x << " is a prime: True\n";
-        else
-            std::cout << x << " is a prime: False\n";
-    }
-    return 0;
-}
-
-bool is_prime(int n) {
+bool is_prime(long long n) {
     
     if (n == 2 || n == 3)
         return true;
@@ -22,9 +8,18 @@ bool is_prime(int n) {
     if (n <= 1 || n % 2 == 0 || n % 3 == 0)
         return false;
 
-    for (int i = 5; i * i <= n; i += 6)
+    for (long long i = 5; i * i <= n; i += 6)
         if (n % i == 0 || n % (i + 2) == 0)
             return false;
 
     return true;
+}
+
+int main()
+{
+    long long a;
+    while (std::cin >> a) {
+        std::cout << a << " is a prime: " << (is_prime(a) ? "True" : "False") << std::endl;
+    }
+    return 0;
 }
