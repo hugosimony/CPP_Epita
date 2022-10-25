@@ -17,9 +17,9 @@ bool is_prime(long long n) {
 
 int main()
 {
-    long long a;
-    while (std::cin >> a) {
-        std::cout << a << " is a prime: " << (is_prime(a) ? "True" : "False") << std::endl;
+    long long x;
+    while (std::cin >> x) {
+        std::cout << x << " is a prime: " << (is_prime(x) ? "True" : "False") << std::endl;
     }
     return 0;
 }
