@@ -2,8 +2,14 @@
 // All occurences of XXX need to be replaced with
 // something more meaningful
 
-template <typename T>
-void swap(T *xp, T *yp);
+#include <algorithm>
 
-template <typename T>
-void my_selection_sort( T begin, T end);
+template< typename iterator >
+void my_selection_sort( iterator begin, iterator end )
+{
+    if( begin != end ) 
+    {
+       std::iter_swap( begin, std::min_element( begin, end ) ) ;
+       my_selection_sort( ++begin, end ) ;
+    }
+}
