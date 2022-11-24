@@ -19,12 +19,18 @@ void read_file_to_cont(std::ifstream &fi, std::list<T> &cont) {
     T val;
     while (fi >> val)
         cont.push_back(val);
+    
 }
 
-template <typename U>
+template <typename T>
 void read_and_sort(std::ifstream &fi, std::ofstream &fo) {
-  std::list<U> cont;
+  std::list<T> cont;
   read_file_to_cont(fi, cont);
+  T line1 = cont.front();
+  cont.pop_front();
+  T line2 = cont.front();
+  cont.pop_front();
+  fo << line1 << std::endl << line2 << std::endl;
   my_selection_sort(cont.begin(), cont.end());
   for (auto &val : cont)
     fo << val << std::endl;
